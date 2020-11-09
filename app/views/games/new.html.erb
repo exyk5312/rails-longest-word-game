@@ -5,5 +5,6 @@
 <form action="/score">
   <input type="text" name='answer'>
   <input type="submit" value='Word'>
+  <input type="hidden" name='grid' value='<%= @grid.join %>'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
-<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
