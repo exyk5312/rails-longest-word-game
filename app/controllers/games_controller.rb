@@ -16,6 +16,7 @@ class GamesController < ApplicationController
     word_json = JSON.parse(word)
     @score = 0
     if word_json['found'] == true
+      # does not work because if both count are 0 it return true
       if params[:answer].chars.all? { |letter| params[:grid].count(letter) <= params[:answer].count(letter) } 
         @score += 1
       end
